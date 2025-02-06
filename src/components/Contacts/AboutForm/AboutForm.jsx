@@ -51,7 +51,6 @@ const AboutForm = () => {
             alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
         }
     };
-
     return (
         <div className={`${styles.formSection}`}>
             <div className={cont.container}>
@@ -85,7 +84,6 @@ const AboutForm = () => {
                             />
                             {errors.email && <span className={styles.error}>{errors.email}</span>}
                         </div>
-
                         <div className={styles.formGroup}>
                             <label htmlFor="phone">Телефон</label>
                             <input
