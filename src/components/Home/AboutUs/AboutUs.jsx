@@ -42,7 +42,7 @@ const About = () => {
                             </p>
                         </div>
                     </div>
-                    <Link to="/catalog" className={styles.ctaButton}>Перейти в каталог</Link>
+                    <Link to="/contacts" className={styles.ctaButton}>Связаться с нами</Link>
                 </div>
                 <div className={styles.aboutImage}>
                     <img src={photo} alt="Автосалон avtoMob" className={styles.image} />
