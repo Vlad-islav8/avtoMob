@@ -191,13 +191,13 @@ const initialState = {
     ],
     locationData:
     {
-        address: 'ул. Пушкина, д. 10',
-        city: 'Москва',
-        postalCode: '123456',
-        phone: '+7 (999) 123-45-67',
-        email: 'info@company.com',
-        workHours: 'Пн-Пт: 9:00 - 18:00',
-        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.5887638669847!2d37.618!3d55.756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ1JzIxLjYiTiAzN8KwMzcnMDQuOCJF!5e0!3m2!1sru!2sru!4v1234567890'
+        address: "пролетарская ул., д. 32",
+        city: "Тула",
+        postalCode: "300000",
+        phone: "+7 (4872) 12-34-56",
+        email: "info@tula-company.com",
+        workHours: "Пн-Пт: 8:00 - 17:00",
+        mapUrl: "https://yandex.ru/maps/15/tula/house/proletarskaya_ulitsa_32/Z04YcANiTUYPQFtufX5xdXtlZg==/?ll=37.642437%2C54.204763&z=17"
     },
     formData: {
         name: '',
@@ -308,7 +308,7 @@ export const carsReducer = createReducer(initialState, (builder) => {
             };
             state.formErrors = {};
         })
-        
+
 });
 
 // Выносим логику фильтрации в отдельную функцию
