@@ -191,7 +191,7 @@ const initialState = {
     ],
     locationData:
     {
-        address: "пролетарская ул., д. 32",
+    address: "пролетарская ул., д. 32",
         city: "Тула",
         postalCode: "300000",
         phone: "+7 (4872) 12-34-56",
