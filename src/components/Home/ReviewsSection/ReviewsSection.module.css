@@ -1,0 +1,111 @@
+.reviewsSection {
+    padding: 4rem 5%;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin-bottom: 2rem;
+}
+
+.sliderContainer {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+
+.sliderButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    color: #3c6e71;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sliderButton:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.sliderButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.prevButton {
+    left: 10px;
+}
+
+.nextButton {
+    right: 10px;
+}
+
+.dotsContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border: none;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot:hover {
+    background: #3c6e71;
+}
+
+.activeDot {
+    background: #3c6e71;
+}
+
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .sliderButton {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+    }
+
+    .prevButton {
+        left: 5px;
+    }
+
+    .nextButton {
+        right: 5px;
+    }
+}

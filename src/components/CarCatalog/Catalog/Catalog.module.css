@@ -1,0 +1,48 @@
+.hidenMoreBtn {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.hidenMoreBtn button {
+  background-color: #3c6e71;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hidenMoreBtn button:hover {
+  background-color: #284b63;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(60, 110, 113, 0.2);
+}
+
+.noResult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* высота контейнера с автомобилями */
+  flex-direction: column;
+  font-size: 1.5rem;
+  color: #3c6e71;
+  /* основной цвет текста */
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  /* светлый фон для выделения */
+  border: 2px dashed #284b63;
+  /* пунктирная граница */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* легкая тень */
+  margin: 20px 0;
+}
+
+.noResult p {
+  margin: 0;
+}

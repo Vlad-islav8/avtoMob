@@ -1,0 +1,229 @@
+.ctaSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 5%;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e0e8ef 100%);
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); 
+}
+
+.slider {
+    width: 55%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px; 
+}
+
+.sliderContainer {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1); 
+    gap: 1.2rem;
+    padding: 0.8rem; 
+}
+
+.card {
+    flex: 0 0 calc(50% - 1rem);
+    background: white;
+    border-radius: 10px;
+    padding: 1.3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cardImageContainer {
+    width: 100%;
+    height: 200px; 
+    border-radius: 6px; 
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem; 
+}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.3) 100%); 
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardTitle {
+    font-size: 1.1rem; /* Reduced font size */
+    font-weight: 700;
+    color: #2d3436;
+    margin-bottom: 0.4rem; /* Reduced margin */
+    padding: 0 0.4rem;
+}
+
+.cardDescription {
+    font-size: 0.9rem; /* Reduced font size */
+    color: #636e72;
+    margin-bottom: 0.8rem; /* Reduced margin */
+    line-height: 1.3;
+    padding: 0 0.4rem;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.6rem; /* Reduced margin */
+    padding: 0 0.4rem;
+}
+
+.cardPrice {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3c6e71;
+}
+
+.cardButton {
+    text-align: center;
+    padding: 0.6rem 1.2rem; /* Reduced padding */
+    background: linear-gradient(135deg, #3c6e71 0%, #284b63 100%);
+    color: white;
+    border: none;
+    border-radius: 20px; /* More rounded */
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smoother transition */
+}
+
+.cardButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(60, 110, 113, 0.25);
+}
+
+
+.sliderButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px; /* Reduced width */
+    height: 35px; /* Reduced height */
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+    font-size: 1rem; /* Reduced font size */
+    color: #3c6e71;
+    transition: all 0.3s ease-in-out; /* Smoother transition */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.sliderButton:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.prevButton {
+    left: 15px; /* Reduced spacing */
+}
+
+.nextButton {
+    right: 15px; /* Reduced spacing */
+}
+
+.ctaContent {
+    width: 40%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ctaTitle {
+    font-size: 2rem; /* Reduced font size */
+    font-weight: 800;
+    color: #2d3436;
+    line-height: 1.2;
+    margin-bottom: 1.2rem; /* Reduced margin */
+}
+
+.ctaText {
+    font-size: 1rem; /* Reduced font size */
+    color: #636e72;
+    line-height: 1.5;
+    margin-bottom: 2rem; /* Reduced margin */
+}
+
+.ctaButton {
+    padding: 0.8rem 2rem; /* Reduced padding */
+    background: linear-gradient(135deg, #3c6e71 0%, #284b63 100%);
+    color: white;
+    border-radius: 25px; /* More rounded */
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smoother transition */
+    align-self: flex-start;
+}
+
+.ctaButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(60, 110, 113, 0.25);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .ctaSection {
+        flex-direction: column;
+        padding: 1.5rem 5%;
+    }
+
+    .slider {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .ctaContent {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ctaTitle {
+        font-size: 1.6rem;
+    }
+
+    .ctaButton {
+        align-self: center;
+    }
+}
+
+.carsInfo {
+    display: flex;
+    justify-content: space-between;
+}
+.cardDesc {
+    color: black;
+    font-weight: 400;
+    margin: 1.2rem 0; 
+
+}
+.cardDesc span {
+    font-weight: 500;
+
+}

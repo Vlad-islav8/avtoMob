@@ -1,0 +1,109 @@
+.formSection {
+    padding: 60px 0;
+    background-color: #fff;
+}
+  
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #284b63;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.formContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(60, 110, 113, 0.2);
+    backdrop-filter: blur(5px);
+}
+  
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+  
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+.formGroup label {
+    color: #353535;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+  
+.formGroup input,
+.formGroup textarea {
+    padding: 14px;
+    border: 2px solid #d9d9d9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+  
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #3c6e71;
+    box-shadow: 0 0 8px rgba(60, 110, 113, 0.3);
+    transform: translateY(-2px);
+}
+  
+.errorInput {
+    border-color: #dc3545 !important;
+    background-color: rgba(220, 53, 69, 0.05);
+}
+  
+.error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    font-weight: 500;
+}
+  
+.submitButton {
+    background-color: #3c6e71;
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+.submitButton:hover {
+    background-color: #284b63;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+  
+.submitButton:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+@media (max-width: 768px) {
+    .formContainer {
+        padding: 25px;
+        margin: 0 15px;
+    }
+  
+    .title {
+        font-size: 2rem;
+    }
+  
+    .submitButton {
+        width: 100%;
+    }
+}

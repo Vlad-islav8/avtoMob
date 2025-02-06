@@ -1,0 +1,41 @@
+.accordionItem {
+    border-bottom: 1px solid #d9d9d9;
+  }
+  
+  .accordionButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.2rem;
+    background-color: #ffffff;
+    color: #284b63;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .accordionButton:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .arrow {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .arrow.open {
+    transform: rotate(180deg);
+  }
+  
+  .accordionContent {
+    padding: 1rem 1.2rem;
+    background-color: #ffffff;
+    color: #353535;
+      line-height: 1.5;
+      font-size: 0.95rem;
+  }
+  

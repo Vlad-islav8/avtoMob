@@ -1,0 +1,98 @@
+.heroSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-image: url('../../../assets/salonBg.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  color: #ffffff; 
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative; 
+  overflow: hidden; 
+}
+
+/* Затемнение фона для лучшей читаемости текста */
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+      to bottom,
+      rgba(40, 75, 99, 0.5), /* #284B63 с прозрачностью 80% */
+      rgba(60, 110, 113, 0.4) /* #3C6E71 с прозрачностью 60% */
+  );
+  z-index: 1;
+}
+
+.heroContent {
+  max-width: 800px;
+  position: relative; /* Чтобы текст был поверх затемнения */
+  z-index: 2;
+  padding: 20px;
+  background: rgba(217, 217, 217, 0.1); /* Легкий полупрозрачный фон для текста */
+  border-radius: 15px;
+  backdrop-filter: blur(5px); /* Размытие фона для эффекта стекла */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.heroContent h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* Белый цвет для заголовка */
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень для текста */
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #d9d9d9; /* Светло-серый цвет для текста */
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Тень для текста */
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #ffffff; /* Белый цвет текста кнопки */
+  background-color: #3c6e71; /* Акцентный цвет кнопки */
+  border-radius: 50px; /* Скругленные углы */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень для кнопки */
+}
+
+.ctaButton:hover {
+  background-color: #284b63; /* Темный оттенок при наведении */
+  transform: translateY(-3px); /* Легкий подъем кнопки */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .heroContent {
+      max-width: 90%;
+      padding: 15px;
+  }
+
+  .heroContent h1 {
+      font-size: 2.5rem;
+  }
+
+  .heroContent p {
+      font-size: 1.2rem;
+  }
+
+  .ctaButton {
+      font-size: 1rem;
+      padding: 12px 24px;
+  }
+}
