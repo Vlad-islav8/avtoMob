@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './AboutUs.module.css';
 import photo from '../../../assets/salonAbout.jpg'; // Импортируем фотографию
+import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
@@ -41,7 +42,7 @@ const About = () => {
                             </p>
                         </div>
                     </div>
-                    <a href="/catalog" className={styles.ctaButton}>Перейти в каталог</a>
+                    <Link to="/catalog" className={styles.ctaButton}>Перейти в каталог</Link>
                 </div>
                 <div className={styles.aboutImage}>
                     <img src={photo} alt="Автосалон avtoMob" className={styles.image} />
