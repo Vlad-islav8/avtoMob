@@ -9,7 +9,7 @@ import Contacts from './components/Contacts/Contacts.jsx';
 
 function App() {
     return (
-        <Router>
+        <Router basename='/avtoMob'>
             <div className="App">
                 <Header />
                 <Routes>

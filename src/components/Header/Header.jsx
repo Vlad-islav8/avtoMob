@@ -6,7 +6,7 @@ import styles from './Header.module.css';
 import logo from '../../assets/Logo.svg';
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(true); // Состояние для открытия/закрытия меню
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // Состояние для открытия/закрытия меню - ИНИЦИАЛИЗИРУЕМ FALSE
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen); // Переключаем состояние меню
@@ -56,7 +56,7 @@ const Header = () => {
                             <FontAwesomeIcon icon={faEnvelope} /> Контакты
                         </Link>
                     </li>
-                    
+
                 </ul>
             </nav>
         </header>
@@ -64,3 +64,4 @@ const Header = () => {
 };
 
 export default Header;
+

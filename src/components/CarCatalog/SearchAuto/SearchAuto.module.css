@@ -1,17 +1,19 @@
+/* Общие стили */
 .SearchAuto {
     width: 100%;
     max-width: 800px;
     margin: 20px auto;
     padding: 0 15px;
-}
-
-.searchWrapper {
+  }
+  
+  .searchWrapper {
     display: flex;
     gap: 10px;
     width: 100%;
-}
-
-.searchInput {
+    flex-direction: row; /* По умолчанию располагаем элементы в ряд */
+  }
+  
+  .searchInput {
     flex: 1;
     padding: 12px 20px;
     font-size: 16px;
@@ -19,18 +21,18 @@
     border-radius: 8px;
     transition: all 0.3s ease;
     outline: none;
-}
-
-.searchInput:focus {
+  }
+  
+  .searchInput:focus {
     border-color: #2196f3;
     box-shadow: 0 0 8px rgba(33, 150, 243, 0.3);
-}
-
-.searchInput::placeholder {
+  }
+  
+  .searchInput::placeholder {
     color: #9e9e9e;
-}
-
-.searchButton {
+  }
+  
+  .searchButton {
     padding: 12px 30px;
     font-size: 16px;
     font-weight: 500;
@@ -40,15 +42,55 @@
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.searchButton:hover {
+  }
+  
+  .searchButton:hover {
     background-color: #1976d2;
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.searchButton:active {
+  }
+  
+  .searchButton:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+  }
+  
+  /* Медиа-запросы для адаптивности */
+  
+  /* Для маленьких экранов (максимальная ширина 768px) */
+  @media (max-width: 768px) {
+    .SearchAuto {
+      padding: 0 10px; /* Уменьшаем отступы по бокам */
+    }
+  
+    .searchWrapper {
+      flex-direction: column; /* Переносим элементы в колонку */
+      gap: 8px; /* Уменьшаем расстояние между элементами */
+    }
+  
+    .searchInput {
+      padding: 10px 15px; /* Уменьшаем отступы внутри поля ввода */
+      font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+  
+    .searchButton {
+      padding: 10px 20px; /* Уменьшаем отступы внутри кнопки */
+      font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+  }
+  
+  /* Для очень маленьких экранов (максимальная ширина 480px) */
+  @media (max-width: 480px) {
+    .SearchAuto {
+      margin: 10px auto; /* Уменьшаем отступы сверху и снизу */
+    }
+  
+    .searchInput {
+      font-size: 12px; /* Еще уменьшаем размер шрифта */
+    }
+  
+    .searchButton {
+      font-size: 12px; /* Еще уменьшаем размер шрифта */
+    }
+  }
+  
