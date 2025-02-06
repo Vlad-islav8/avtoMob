@@ -1,6 +1,7 @@
 .formSection {
     padding: 60px 0;
-    background-color: #fff;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e0e8ef 100%);
+    border-radius: 150px 150px 0 0;
 }
   
 .title {

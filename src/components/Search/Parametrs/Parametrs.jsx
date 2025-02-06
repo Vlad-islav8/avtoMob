@@ -16,7 +16,6 @@ const Parametrs = () => {
         engine_type: '',
         color: '',
         no_accidents: false,
-        // Добавляем новые фильтры
         source: '',
         wheel: '',
         region: '',
@@ -44,6 +43,8 @@ const Parametrs = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        debugger
+        
         dispatch(filterCars(filters))
     }
 
@@ -112,30 +113,33 @@ const Parametrs = () => {
             <div className={styles.filterGroup}>
                 <h3>Тип кузова</h3>
                 <select name="body_type" value={filters.body_type} onChange={handleFilterChange}>
-                    <option value="">Все</option>
-                    <option value="sedan">Седан</option>
-                    <option value="suv">Внедорожник</option>
-                    <option value="hatchback">Хэтчбек</option>
-                    <option value="wagon">Универсал</option>
+                    <option value="">Любой</option>
+                    <option value="Седан">Седан</option>
+                    <option value="Хэтчбек">Хэтчбек</option>
+                    <option value="Универсал">Универсал</option>
+                    <option value="Внедорожник">Внедорожник</option>
+                    <option value="Минивэн">Минивэн</option>
                 </select>
             </div>
 
             <div className={styles.filterGroup}>
                 <h3>Коробка передач</h3>
                 <select name="transmission" value={filters.transmission} onChange={handleFilterChange}>
-                    <option value="">Все</option>
-                    <option value="automatic">Автомат</option>
-                    <option value="manual">Механика</option>
+                    <option value="">Любая</option>
+                    <option value="автомат">Автоматическая</option>
+                    <option value="механика">Механическая</option>
+                    <option value=" робот">Роботизированная</option>
+                    <option value="вариатор">Вариатор</option>
                 </select>
             </div>
 
             <div className={styles.filterGroup}>
                 <h3>Привод</h3>
                 <select name="drive_type" value={filters.drive_type} onChange={handleFilterChange}>
-                    <option value="">Все</option>
-                    <option value="front">Передний</option>
-                    <option value="rear">Задний</option>
-                    <option value="full">Полный</option>
+                    <option value="">Любой</option>
+                    <option value="Передний">Передний</option>
+                    <option value="Задний">Задний</option>
+                    <option value="Полный">Полный</option>
                 </select>
             </div>
 

@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit'
-import { loadCars, SearhUpdateText, filterCars, setFormData, resetForm, setFormErrors } from './action'
+import { loadCars, SearhUpdateText, filterCars, setFormData, setFormErrors, resetForm } from './action'
 
 import jsonCars from './cars.json'
 import choise from '../assets/choice.svg'
@@ -211,6 +211,7 @@ const initialState = {
 
 // Функция для обработки данных
 const processCars = (cars) => {
+    debugger
     return cars.map(car => ({
         ...car,
         image_urls: typeof car.image_urls === 'string'
@@ -265,7 +266,7 @@ export const carsReducer = createReducer(initialState, (builder) => {
             state.currentFilters = action.payload;
             const cars = jsonCars["Лист 1"];
             let filteredCars = processCars(cars);
-
+            debugger
             // Сначала применяем поисковый фильтр
             if (state.searchText) {
                 const searchTerms = state.searchText.toLowerCase().split(' ');
@@ -279,7 +280,7 @@ export const carsReducer = createReducer(initialState, (builder) => {
 
             // Затем применяем остальные фильтры
             filteredCars = applyFilters(filteredCars, action.payload);
-
+            debugger
             state.allCars = filteredCars;
         })
         .addCase(setFormData, (state, action) => {
@@ -312,6 +313,7 @@ export const carsReducer = createReducer(initialState, (builder) => {
 
 // Выносим логику фильтрации в отдельную функцию
 function applyFilters(cars, filters) {
+    debugger
     return cars.filter(car => {
         // Проверка цены
         if (filters.price.min && car.price_rub < Number(filters.price.min)) return false;
@@ -326,13 +328,13 @@ function applyFilters(cars, filters) {
         if (filters.km_age.max && car.km_age > Number(filters.km_age.max)) return false;
 
         // Проверка типа кузова
-        if (filters.body_type && car.body_type !== filters.body_type) return false;
+        if (filters.body_type && car.body_type?.toLowerCase() !== filters.body_type.toLowerCase()) return false;
 
         // Проверка коробки передач
-        if (filters.transmission && car.transmission !== filters.transmission) return false;
+        if (filters.transmission && car.transmission?.toLowerCase() !== filters.transmission.toLowerCase()) return false;
 
         // Проверка привода
-        if (filters.drive_type && car.drive_type !== filters.drive_type) return false;
+        if (filters.drive_type && car.drive_type?.toLowerCase() !== filters.drive_type.toLowerCase()) return false;
 
         // Проверка ДТП
         if (filters.no_accidents && !car.no_accidents) return false;
